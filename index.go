@@ -28,10 +28,10 @@ type Error struct {
 } 
 
 
-var guestbookTemplate = template.Must(template.ParseFiles("tmpl/chat.htm"))
-var loginTemplate = template.Must(template.ParseFiles("tmpl/loginscreen.htm"))
-var applyTemplate = template.Must(template.ParseFiles("tmpl/applyscreen.htm"))
-var homeTemplate = template.Must(template.ParseFiles("tmpl/index.htm"))
+var guestbookTemplate = template.Must(template.ParseFiles("tmpl\\chat.htm"))
+var loginTemplate = template.Must(template.ParseFiles("tmpl\\loginscreen.htm"))
+var applyTemplate = template.Must(template.ParseFiles("tmpl\\applyscreen.htm"))
+var homeTemplate = template.Must(template.ParseFiles("tmpl\\index.htm"))
  
 func main() {
 http.HandleFunc("/", home)
