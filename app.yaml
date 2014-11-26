@@ -4,21 +4,18 @@ runtime: go
 api_version: go1
 
 handlers:
-- url: /login
+- url: /loginscreen\.htm
   script: _go_app
 
-- url: /apply
-  script: _go_app
-
-
-- url: /chat
+- url: /applyscreen\.htm
   script: _go_app
 
 
-- url: /sign
+- url: /chat\.htm
   script: _go_app
 
-- url: /index
+
+- url: /index\.htm
   script: _go_app
 
 
