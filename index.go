@@ -39,6 +39,7 @@ http.HandleFunc("/login",login)
 http.HandleFunc("/chat", chat)
 http.HandleFunc("/sign", sign)
 http.HandleFunc("/apply", apply)
+http.ListenAndServe(":8080", nil)
 
 }
 
