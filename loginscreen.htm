@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<style>
+body {
+	font-family: arial, sans-serif;
+}
+
+#header {
+	background-color: #dde;
+	border-top: 3px solid #36c;
+	height: 100%;
+	overflow:hidden;
+	padding: 7px;
+	margin-top: 5px;
+}
+
+a {
+	color: blue;
+}
+
+#header h1 a {
+	text-decoration: none;
+	color: black;
+}
+
+#header h1 {
+	font-size: 20px;
+	float: left;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0 0 0 .3em;
+}
+
+#header li {
+	font-size: 14px;
+	display: inline;
+	padding: .5em;
+}
+
+#header ul {
+	list-style: none;
+	text-align: right;
+	float:right;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: arial, sans-serif;
+}
+h1 a {
+	text-decoration: none;
+	color: black;
+}
+
+table {
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+
+th {
+	text-align: left;
+	border: 1px solid black;
+	background: gray;
+	color: white;
+	padding: 0.2em;
+}
+td {
+	border: 1px solid black;
+	padding: 0.2em;
+}
+</style>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>{% block title %}App Engine - HTML{% endblock %}</title>
+		<link type="text/css" rel="stylesheet" href="static/glike.css"/>
+	</head>
+	<body>
+		<div id="header">
+			<h1><a href="/">App Engine</a></h1>
+			<h1><a href="/">App Engine</a></h1>
+			<ul>
+				
+					
+					<li><a href="/sign"
+						{% ifequal path '/sign' %}
+							class="selected"
+						{% endifequal %}
+					      >Chat</a></li>
+				
+
+				
+					<li><a href="/logout">Logout</a></li>
+			
+					<li><a href="/login"
+						{% ifequal path '/login' %}
+							class="selected"
+						{% endifequal %}
+					      >Login</a></li>
+				
+			</ul>
+		</div>
+	<h2>Please Log In</h2>
+	<p>
+	Please enter your id and password to log in to this site.
+	</p>
+	<form method="post" action="/login">
+	Account: <input type="text" name="account"/> <br>
+	Password: <input type="password" name="password"/> <br/>
+	<input type="submit" value="Submit"/>
+	<input type="submit" value="Cancel"
+		onclick="window.location='/'; return false;"/>
+	<input type="submit" value="New Account"
+		onclick="window.location='/apply'; return false;"/>
+	</form>
+	</p>
+	
+
+	</body>
+</html>
+
+
