@@ -4,23 +4,17 @@ runtime: go
 api_version: go1
 
 handlers:
-- url: /loginscreen.htm
-  script: _go_app
-
-- url: /applyscreen.htm
-  script: _go_app
-
-
-- url: /chat.htm
-  script: _go_app
+ 
+- url: /tmpl
+  static_dir: static/tmpl
+  application_readable: true 
 
 
-- url: /index.htm
-  script: _go_app
+
+
+
 
 
 - url: /.*
   script: _go_app
 
-- url: /
-  script: _go_app
